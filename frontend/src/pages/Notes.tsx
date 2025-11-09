@@ -83,7 +83,7 @@ export default function Notes({ user }: { user: User }) {
         <div className="min-h-screen bg-gradient-to-br from-blue-500 to-blue-600 text-gray-800">
             {/* Header */}
             <header className="flex justify-between items-center px-6 py-4 bg-white/10 backdrop-blur-md shadow-md">
-                <h1 className="text-2xl font-bold text-white">My Notes 📝</h1>
+                <h1 className="text-2xl font-bold text-white">My Notes</h1>
                 <div className="flex items-center gap-4">
                     <span className="text-white hidden sm:block">{user.email}</span>
                     <button
