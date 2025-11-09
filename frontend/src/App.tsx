@@ -9,7 +9,7 @@ interface Note {
     userId: string;
 }
 
-const API_URL = "http://localhost:4000";
+const API_URL = "http://127.0.0.1:5001/react-notes-sample/australia-southeast1";
 
 function App(){
 
@@ -27,8 +27,9 @@ function App(){
 
     const fetchNotes = async () => {
         if (!user) {
-            return;
+            return <Login onLogin={setUser} />;
         }
+        console.log(user)
         try {
             setLoading(true);
             const token = await user.getIdToken();
