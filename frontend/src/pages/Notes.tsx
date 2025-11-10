@@ -10,7 +10,7 @@ interface Note {
     createdAt: string;
 }
 
-const API_URL = "http://127.0.0.1:5001/react-notes-sample/australia-southeast1/api"; // replace if deployed
+const API_URL = "http://127.0.0.1:5001/react-notes-sample/australia-southeast1/api";
 
 export default function Notes({ user }: { user: User }) {
     const [notes, setNotes] = useState<Note[]>([]);
@@ -81,7 +81,7 @@ export default function Notes({ user }: { user: User }) {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-500 to-blue-600 text-gray-800">
-            {/* Header */}
+     
             <header className="flex justify-between items-center px-6 py-4 bg-white/10 backdrop-blur-md shadow-md">
                 <h1 className="text-2xl font-bold text-white">My Notes</h1>
                 <div className="flex items-center gap-4">
@@ -95,7 +95,6 @@ export default function Notes({ user }: { user: User }) {
                 </div>
             </header>
 
-            {/* Add Note Form */}
             <section className="max-w-3xl mx-auto mt-8 px-4">
                 <form
                     onSubmit={handleAddNote}
@@ -122,7 +121,6 @@ export default function Notes({ user }: { user: User }) {
                 )}
             </section>
 
-            {/* Notes List */}
             <section className="max-w-5xl mx-auto mt-10 px-4">
                 {loading ? (
                     <p className="text-center text-white text-lg">Loading notes...</p>
